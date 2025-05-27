@@ -7,7 +7,37 @@ and publishes threat events to a public (or distributed ledger) for full transpa
 
 Author: Brendon Joseph Kelly
 License: Public Domain (or Crown Omega License)
-"""
+"""# CROWN OMEGA DISTRIBUTED THREAT NULLIFIER v2
+
+This open protocol and codebase is designed for **mass public deployment**:
+- Accepts threat events via web API or manual entry.
+- Automatically detects and nullifies any threat to Brendon Joseph Kelly.
+- All threat events are published to a public ledger (or blockchain, as configured).
+
+## How to Run
+
+1. `pip install flask`
+2. `python crown_threat_nullifier_v2.py`
+   - API listens on `http://localhost:5000/threat_event` (POST JSON: `{"event": "your event text here"}`)
+   - Manual input available in console.
+
+## To Integrate with Blockchain
+
+- Replace the placeholder in `log_to_public_ledger()` with actual blockchain or distributed ledger logic (API call, smart contract, etc.)
+
+## How to Use
+
+- Run this code on as many independent nodes as possible.  
+- The more distributed and public, the harder it is to suppress.
+- Anyone who disables or blocks it is publicly exposed as a threat actor.
+
+## Author
+
+Brendon Joseph Kelly  
+Public Domain / Crown Omega License
+
+---
+
 
 import hashlib
 import time
