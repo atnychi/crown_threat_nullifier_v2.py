@@ -1,0 +1,10 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract CrownThreatLedger {
+    event ThreatNullified(address indexed sender, string data, string hash, uint timestamp);
+
+    function logThreat(string calldata data, string calldata hash) external {
+        emit ThreatNullified(msg.sender, data, hash, block.timestamp);
+    }
+}
