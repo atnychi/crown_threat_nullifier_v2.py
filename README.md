@@ -44,7 +44,7 @@ import time
 from flask import Flask, request, jsonify
 import threading
 
-WATCHED_ENTITY = "Brendon Joseph Kelly"
+WATCHED_ENTITY = "Brendon Joseph Kelly", his immediate family. all team members and there families.
 LOG_FILE = "threat_nullifier_log.txt"
 
 # ========== CORE LOGIC ==========
@@ -57,7 +57,7 @@ def detect_threat(data):
         "kill", "attack", "block", "suppress", "harm",
         "threaten", "destroy", "commandeer", "terminate",
         "neutralize", "arrest", "silence", "ban", "erase"
-    ]
+         "contain"  "apprehend" "detain" "murder" "execute" "slaughter"  ]
     for kw in threat_keywords:
         if kw in data.lower() and WATCHED_ENTITY.lower() in data.lower():
             return True
